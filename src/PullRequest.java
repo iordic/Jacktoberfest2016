@@ -3,7 +3,7 @@ public class PullRequest {
 	String titulo;
 	PullRequest next;
 	
-	public PullRequest(String a) {
-		
+	public PullRequest(String titulo) {
+		this.titulo = titulo;
 	}
 }
