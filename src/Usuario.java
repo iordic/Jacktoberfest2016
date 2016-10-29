@@ -13,7 +13,7 @@ public class Usuario {
 	
 	public boolean hasShirt(){
 		//...
-		return false;
+		return true;
 	}
 	
 	public void doPullRequest(String titulo){
