@@ -19,7 +19,7 @@ public class Usuario {
 	public void doPullRequest(String titulo){
 		
 		if() {
-			// Sí tiene tamaño(prs) >= 4 -> pedirCamiseta(talla)
+			// SÃ­ tiene tamaÃ±o(prs) >= 4 -> pedirCamiseta(talla)
 		}
 	}
 	
@@ -29,6 +29,6 @@ public class Usuario {
 	
 	public int getTotalRequests() {
 		//...
-		return 0;
+		return totalRequest;
 	}
 }
