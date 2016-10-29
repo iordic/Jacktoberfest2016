@@ -7,13 +7,11 @@ public class ListaPR {
 	}
 	
 	public void insertarPR(String t) {
-		
+		this.t=t;
 	}
 	
 	public int getSize() {
-		
-		
-		return 0;
+		return size;
 	}
 	
 	public boolean isEmpty() {
