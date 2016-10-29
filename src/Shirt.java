@@ -10,7 +10,7 @@ public class Shirt {
 		return talla;
 	}
 	
-	public setTalla(int t) {
-		this.talla = talla;
+	public void setTalla(int t) {
+		this.talla = t;
 	}
 }

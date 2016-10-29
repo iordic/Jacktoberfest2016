@@ -5,30 +5,32 @@ public class Usuario {
 	Shirt camiseta;
 	int talla;
 	
-	public Usuario(String n) {
-		//...
+	public Usuario(String n, int t) {
+		nombre = n;
+		talla = t;
 		prs = new ListaPR();
 		camiseta = null;
 	}
 	
 	public boolean hasShirt(){
-		//...
-		return true;
+		if(camiseta != null)
+			return true;
+		return false;
 	}
 	
 	public void doPullRequest(String titulo){
-		
-		if() {
-			// Sí tiene tamaño(prs) >= 4 -> pedirCamiseta(talla)
+		prs.insertarPR(titulo);
+		if(prs.getSize() >= 4) {
+			pedirCamiseta(talla);
 		}
 	}
 	
-	public void pedirCamiseta(int talla) {
-		System.out.println("Quiero mi camiseta.);
+	public void pedirCamiseta(int t) {
+		System.out.println("Quiero mi camiseta.");
+		//...
 	}
 	
 	public int getTotalRequests() {
-		//...
-		return totalRequest;
+		return prs.getSize();
 	}
 }

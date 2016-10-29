@@ -7,18 +7,36 @@ public class ListaPR {
 	}
 	
 	public void insertarPR(String t) {
-		this.t=t;
+		PullRequest newNode = new PullRequest(t);
+		if(isEmpty()) {
+			first.next = newNode;
+		}
+		else {
+			PullRequest aux = first;
+			while(aux.next != null) {
+				aux = aux.next;
+			}
+			aux.next = newNode;
+		}
 	}
 	
 	public int getSize() {
-		return size;
+		int i = 0;
+		PullRequest aux = first;
+		while(aux.next != null) {
+			aux = aux.next;
+			i++;
+		}
+		return i;
 	}
 	
 	public boolean isEmpty() {
-		//...
+		if(first.next == null) {
+			return true;
+		}
 		return false;
 	}
 	public PullRequest getFirst() {
-		return fisrt.next;
+		return first.next;
 	}
 }
