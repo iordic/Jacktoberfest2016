@@ -1,4 +1,8 @@
-
+/**
+ * Implementación de lista simplemente enlazada.
+ * @author Jordi
+ *
+ */
 public class ListaPR {
 	PullRequest first;
 	
@@ -39,5 +43,19 @@ public class ListaPR {
 	
 	public PullRequest getFirst() {
 		return first.next;
+	}
+	
+	public void listPRs() {
+		//...
+		// Recorrer elementos e imprimir uno a uno con system.out.println()
+		//...
+	}
+	
+	public void deletePR(String title) {
+		
+	}
+	
+	public void searchPR(String title) {
+		
 	}
 }

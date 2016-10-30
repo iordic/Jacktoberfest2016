@@ -33,4 +33,8 @@ public class Usuario {
 	public int getTotalRequests() {
 		return prs.getSize();
 	}
+	
+	public void listPullRequests() {
+		prs.listPRs();
+	}
 }
