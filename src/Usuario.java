@@ -27,7 +27,7 @@ public class Usuario {
 	
 	public void pedirCamiseta(int t) {
 		System.out.println("Quiero mi camiseta.");
-		//...
+		camiseta = new Shirt(t);
 	}
 	
 	public int getTotalRequests() {
