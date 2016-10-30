@@ -1,5 +1,5 @@
 /**
- * Implementación de lista simplemente enlazada.
+ * ImplementaciÃ³n de lista simplemente enlazada.
  * @author Jordi
  *
  */
@@ -46,9 +46,11 @@ public class ListaPR {
 	}
 	
 	public void listPRs() {
-		//...
-		// Recorrer elementos e imprimir uno a uno con system.out.println()
-		//...
+		PullRequest aux = first;
+		while(aux.next != null) {
+			aux = aux.next;
+			System.out.println(aux.titulo);
+		}
 	}
 	
 	public void deletePR(String title) {
