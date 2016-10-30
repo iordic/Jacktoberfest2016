@@ -46,9 +46,11 @@ public class ListaPR {
 	}
 	
 	public void listPRs() {
-		//...
-		// Recorrer elementos e imprimir uno a uno con system.out.println()
-		//...
+		PullRequest aux = first;
+		while(aux.next != null) {
+			System.out.println(aux.titulo);
+			aux = aux.next;
+		}
 	}
 	
 	public void deletePR(String title) {
