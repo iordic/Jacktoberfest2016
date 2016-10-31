@@ -66,22 +66,14 @@ public class ListaPR {
      * @return El primer PullRequest con el título deseado
      */
     public PullRequest searchPR(String title) {
-
-        PullRequest resultPullRequest = null;
-        PullRequest currentPullRequest;
-
-        currentPullRequest = this.first;
-
-        while (currentPullRequest.next != null) {
-
-            if (currentPullRequest.titulo.equals(title)) {
-                resultPullRequest = currentPullRequest;
+        PullRequest aux = first;
+        while(aux.next != null) {
+            if(aux.titulo.equals(title)) {
                 break;
             }
-            currentPullRequest = currentPullRequest.next;
+            aux = aux.next;
         }
-
-        return resultPullRequest;
+        return aux;
     }
 
 }
