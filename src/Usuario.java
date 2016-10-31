@@ -18,7 +18,7 @@ public class Usuario {
 		return false;
 	}
 	
-	public void doPullRequest(String titulo){
+	public void doPullRequest(String titulo) {
 		prs.insertarPR(titulo);
 		if(prs.getSize() >= 4) {
 			pedirCamiseta(talla);

@@ -60,10 +60,9 @@ public class ListaPR {
     }
 
     /**
-     *
-     * @param title El título del PullRequest a buscar
-     *
-     * @return El primer PullRequest con el título deseado
+     * Busca un pull request por el título y lo devuelve.
+     * @param title título del pull request
+     * @return nodo que contiene el pull request
      */
     public PullRequest searchPR(String title) {
         PullRequest aux = first;
