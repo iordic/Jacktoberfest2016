@@ -10,16 +10,16 @@ public class ListaPR {
     PullRequest first;
 
     public ListaPR() {
-        first = new PullRequest( null );
+        first = new PullRequest(null);
     }
 
-    public void insertarPR( String t ) {
-        PullRequest newNode = new PullRequest( t );
-        if ( isEmpty() ) {
+    public void insertarPR(String t) {
+        PullRequest newNode = new PullRequest(t);
+        if (isEmpty()) {
             first.next = newNode;
         } else {
             PullRequest aux = first;
-            while ( aux.next != null ) {
+            while (aux.next != null) {
                 aux = aux.next;
             }
             aux.next = newNode;
@@ -29,7 +29,7 @@ public class ListaPR {
     public int getSize() {
         int i = 0;
         PullRequest aux = first;
-        while ( aux.next != null ) {
+        while (aux.next != null) {
             aux = aux.next;
             i++;
         }
@@ -37,7 +37,7 @@ public class ListaPR {
     }
 
     public boolean isEmpty() {
-        if ( first.next == null ) {
+        if (first.next == null) {
             return true;
         }
         return false;
@@ -49,13 +49,13 @@ public class ListaPR {
 
     public void listPRs() {
         PullRequest aux = first;
-        while ( aux.next != null ) {
+        while (aux.next != null) {
             aux = aux.next;
-            System.out.println( aux.titulo );
+            System.out.println(aux.titulo);
         }
     }
 
-    public void deletePR( String title ) {
+    public void deletePR(String title) {
 
     }
 
@@ -65,16 +65,16 @@ public class ListaPR {
      *
      * @return La primer PullRequest con el titulo deseado
      */
-    public PullRequest searchPR( String title ) {
+    public PullRequest searchPR(String title) {
 
         PullRequest resultPullRequest = null;
         PullRequest currentPullRequest;
 
         currentPullRequest = this.first;
 
-        while ( currentPullRequest.next != null ) {
+        while (currentPullRequest.next != null) {
 
-            if ( currentPullRequest.titulo.equals( title ) ) {
+            if (currentPullRequest.titulo.equals(title)) {
                 resultPullRequest = currentPullRequest;
                 break;
             }
