@@ -54,7 +54,20 @@ public class ListaPR {
 	}
 	
 	public void deletePR(String title) {
-		
+		PullRequest aux = first;
+		if(title == aux.titulo) {
+			aux = aux.next;
+			return;
+		}
+		previous = aux;
+		current = aux.next;
+		while(current != null) {
+			if(current.titulo == title) 
+				previous.next = current.next;
+			else{
+				previous = previous.next;
+				current = current.next
+			}		
 	}
 	
 	public void searchPR(String title) {
