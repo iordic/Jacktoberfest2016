@@ -1,6 +1,6 @@
 
 /**
- * ImplementaciÃ³n de lista simplemente enlazada.
+ * Implementación de lista simplemente enlazada.
  *
  * @author Jordi
  *
@@ -61,9 +61,9 @@ public class ListaPR {
 
     /**
      *
-     * @param title El titulo de la PullRequest a buscar
+     * @param title El título del PullRequest a buscar
      *
-     * @return La primer PullRequest con el titulo deseado
+     * @return El primer PullRequest con el título deseado
      */
     public PullRequest searchPR(String title) {
 
