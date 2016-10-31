@@ -69,11 +69,11 @@ public class ListaPR {
         PullRequest aux = first;
         while(aux.next != null) {
             if(aux.titulo.equals(title)) {
-                break;
+                return aux;
             }
             aux = aux.next;
         }
-        return aux;
+        return null;
     }
 
 }
