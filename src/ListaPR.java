@@ -1,4 +1,3 @@
-
 /**
  * Implementación de lista simplemente enlazada.
  * @author Jordi
@@ -19,7 +18,8 @@ public class ListaPR {
         PullRequest newNode = new PullRequest(t);
         if (isEmpty()) {
             first.next = newNode;
-        } else {
+        } 
+        else {
             PullRequest aux = first;
             while (aux.next != null) {
                 aux = aux.next;
@@ -77,7 +77,27 @@ public class ListaPR {
      * @param title titulo a buscar
      */
     public void deletePR(String title) {
-
+    	if(isEmpty()) {
+    		System.out.println("La lista está vacía.");
+    		return;
+    	}
+		PullRequest aux = first;
+		PullRequest prev = null;
+		while(aux.next != null) {
+			if(aux.titulo.equals(title) && prev != null) {
+				prev.next = aux.next;
+				System.out.println("Se ha eliminado el PR " + title +".");
+				return;
+			}
+			else if(aux.titulo.equals(title) && prev == null) {
+				first = aux.next;
+				System.out.println("Se ha eliminado el PR " + title +".");
+				return;
+			}
+			prev = aux;
+			aux = aux.next;
+		}
+		System.out.println("El PR " + title + " no existe.");
     }
 
     /**
