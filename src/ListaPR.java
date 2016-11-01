@@ -1,9 +1,7 @@
 
 /**
  * Implementación de lista simplemente enlazada.
- *
  * @author Jordi
- *
  */
 public class ListaPR {
 
@@ -13,6 +11,10 @@ public class ListaPR {
         first = new PullRequest(null);
     }
 
+    /**
+     * Crea un nuevo PR (nodo) y lo inserta en la lista
+     * @param t título del PR nuevo a insertar
+     */
     public void insertarPR(String t) {
         PullRequest newNode = new PullRequest(t);
         if (isEmpty()) {
@@ -26,6 +28,10 @@ public class ListaPR {
         }
     }
 
+    /**
+     * Devuelve el tamaño de la lista
+     * @return número de elementos que contiene la lista
+     */
     public int getSize() {
         int i = 0;
         PullRequest aux = first;
@@ -36,6 +42,10 @@ public class ListaPR {
         return i;
     }
 
+    /**
+     * Comprueba si la lista está vacía
+     * @return true si está vacía y false en caso contrario
+     */
     public boolean isEmpty() {
         if (first.next == null) {
             return true;
@@ -43,10 +53,17 @@ public class ListaPR {
         return false;
     }
 
+    /**
+     * Devuelve el primer nodo (o PR) de la lista
+     * @return primer elemento de la lista
+     */
     public PullRequest getFirst() {
         return first.next;
     }
 
+    /**
+     * Imprime por pantalla los titulos de los elementos
+     */
     public void listPRs() {
         PullRequest aux = first;
         while (aux.next != null) {
@@ -55,6 +72,10 @@ public class ListaPR {
         }
     }
 
+    /**
+     * Busca un nodo por su titulo y lo elimina de la lista
+     * @param title titulo a buscar
+     */
     public void deletePR(String title) {
 
     }
